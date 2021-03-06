@@ -1,0 +1,35 @@
+<xs:schema elementFormDefault="qualified"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="biblioteca">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="endereco">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:byte" name="numero"/>
+                            <xs:element type="xs:string" name="complemento"/>
+                        </xs:sequence>
+                        <xs:attribute type="xs:int" name="cep"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="livros">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="livro" maxOccurs="unbounded" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element type="xs:string" name="titulo"/>
+                                        <xs:element type="xs:short" name="paginas"/>
+                                        <xs:element type="xs:string" name="autor" maxOccurs="unbounded" minOccurs="0"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:byte" name="quantidade" use="optional"/>
+                                    <xs:attribute type="xs:byte" name="emprestados" use="optional"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <!ELEMENT biblioteca (endereco,livros)>
+        <!ATTLIST biblioteca
+                xmlns CDATA #FIXED ''>
+
+        <!ELEMENT endereco (numero,complemento)>
+        <!ATTLIST endereco
+                xmlns CDATA #FIXED ''
+                cep CDATA #REQUIRED>
+
+        <!ELEMENT livros (livro)+>
+        <!ATTLIST livros
+                xmlns CDATA #FIXED ''>
+
+        <!ELEMENT numero (#PCDATA)>
+        <!ATTLIST numero
+                xmlns CDATA #FIXED ''>
+
+        <!ELEMENT complemento (#PCDATA)>
+        <!ATTLIST complemento
+                xmlns CDATA #FIXED ''>
+
+        <!ELEMENT livro (titulo,paginas,autor+)>
+        <!ATTLIST livro
+                xmlns CDATA #FIXED ''
+                emprestados CDATA #REQUIRED
+                quantidade CDATA #REQUIRED>
+
+        <!ELEMENT titulo (#PCDATA)>
+        <!ATTLIST titulo
+                xmlns CDATA #FIXED ''>
+
+        <!ELEMENT paginas (#PCDATA)>
+        <!ATTLIST paginas
+                xmlns CDATA #FIXED ''>
+
+        <!ELEMENT autor (#PCDATA)>
+        <!ATTLIST autor
+                xmlns CDATA #FIXED ''>
